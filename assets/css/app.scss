@@ -1,0 +1,38 @@
+---
+---
+$primary: #b9e2eb;
+
+/* Style the buttons inside the tab */
+.tabanchor.tablinks {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 20px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tablinks :hover {
+    background-color: rgb(10, 112, 172);
+  }
+  
+  /* Create an active/current tablink class */
+  .tablinks.active {
+    color:rgb(10, 112, 172);
+  }
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    font-size: 20px;
+  }
+.tabcontent.active {
+    display: block;
+}
+// Import Main CSS file from theme
+@import "main";

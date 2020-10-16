@@ -1,0 +1,23 @@
+- tier_name: AWS
+  size: large
+  description: |-
+    These are the services avaiable for AWS.
+  services:
+    - name: EC2
+      link: /aws-ec2/
+    - name: EKS
+      link: /aws-eks/
+    - name: S3
+      link: /aws-s3/
+
+- tier_name: GCP
+  size: large
+  description: |-
+    These are the services avaiable for AWS.
+  services:
+    - name: Cpmpute
+      link: /gcp-compute/
+    - name: GKE
+      link: /gcp-gke/
+
+

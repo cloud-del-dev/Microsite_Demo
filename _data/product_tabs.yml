@@ -1,0 +1,10 @@
+alignment: is-left
+style: is-toggle
+size: is-large
+items:
+  - name: Overview
+    section: 1
+  - name: Documentation
+    section: 2
+  - name: Code
+    section: 3

@@ -1,0 +1,32 @@
+<script src="{{ site.baseurl }}/assets/js/openTab.js" type="text/javascript"></script>
+{% if page.tabs %}
+{% assign tabs = site.data.[page.tabs] %}
+
+<div class="tabs {% if tabs.size %}{{ tabs.size }}{% endif %} {% if tabs.alignment %}{{ tabs.alignment }}{% endif %} {% if tabs.style %}{{ tabs.style }}{% endif %}">
+    <ul>
+        <li ><a class="tabanchor"> <span class="tablinks " onclick="openTab(event, 'Overview')">Overview</span></a></li>
+        <li ><a class="tabanchor"> <span class="tablinks" onclick="openTab(event, 'Documentation')">Documentation</span></a></li>
+        <li ><a class="tabanchor"> <span class="tablinks" onclick="openTab(event, 'Code')">Code</span></a></li>
+    </ul>
+</div>
+
+<div id="Overview" class="tabcontent active">
+        <h2>Service Name: {{page.title}} </h2> 
+        <h2>Service Description: {{page.description}}  </h2> 
+        <h2>Service Name: {{page.Service-Status}}</h2>
+        <h2>Service SLA: <a href = {{page.SLA}}>{{page.SLA}}</a></h2>      
+</div>
+
+<div id="Documentation" class="tabcontent">
+        <h2>Use Cases:</h2>     
+        <h2>{{page.Use-Cases}}</h2>  <br><br>  
+        <h2>onboarding:</h2>     
+        <h2>{{page.Onboarding}}</h2>  <br><br>  
+</div>
+
+<div id="Code" class="tabcontent">
+        <h2>Terraform templates:<a href = {{page.Tf}}>{{page.Tf}}</a></h2> 
+</div>
+
+{% endif %}
+      

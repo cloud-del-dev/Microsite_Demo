@@ -1,0 +1,38 @@
+---
+layout: default
+show_sidebar: false
+---
+
+<div class="columns is-multiline">
+
+  <div class="column is-12">
+    {{ page.content }}
+  </div>
+
+  {% assign sorted_providers = site.providers %}
+
+  {% for provider in sorted_providers  %}
+  <div class="column is-4-desktop is-6-tablet">
+
+      <div class="card">
+        <div class="card-header-title">{{ provider.title }}</div>
+        
+        {% assign sorted_products = site.products %}
+        {% for product in site.products %}
+          {% if product.category == provider.category %}
+          <div class="card-content">
+            <div class="card-image">
+                <img src="{{ product.image }}" alt="{{ product.title }}" width="30" height="40"/>
+                <a class="title is-4" href="{{ product.url | relative_url }}"> {{product.subtitle}} </a>
+            </div>
+        </div>
+        {% endif%}
+        {% endfor %}
+      </div>
+
+    </a>
+
+  </div>
+{% endfor %}
+</div>
+
